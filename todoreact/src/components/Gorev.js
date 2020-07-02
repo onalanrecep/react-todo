@@ -4,12 +4,12 @@ class Gorev extends Component {
     render() {
         return (  
         <div className="gorev-card">
-            <h4 className="gor-bas">Görev 1</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos doloribus neque sequi?</p>
+            <h4 className="gor-bas">{this.props.baslik}</h4>
+            <p>{this.props.tanim}</p>
             <div className="gor-durumlar">
-              <div className="durumlar">Sorumlu</div>
-              <div className="durumlar">Durum</div>
-              <div className="durumlar">Öncelik</div>
+              <div className="durumlar">{this.props.sorumlu}</div>
+              <div className="durumlar">{this.props.durum}</div>
+              <div className="durumlar">{this.props.oncelik}</div>
             </div>
         </div>    
         )

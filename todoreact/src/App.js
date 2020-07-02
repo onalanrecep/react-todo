@@ -12,27 +12,25 @@ function App() {
       <div className="gunler">
         <div className="gun"> 
           <h3 className="baslik">Pazartesi</h3>
-          <Gorev/>
-          <Gorev/>
-          <Gorev/>
+          <Gorev
+            baslik = "Görev 1"
+            tanim = "lorem ipsum deneme ve deneme daha da deneme"
+            sorumlu = "Falan"
+            oncelik = "Acil"
+            durum = "İşlemde"
+          />
         </div>
         <div className="gun"> 
           <h3 className="baslik">Salı</h3>
-          <Gorev/>
-          <Gorev/>
         </div>
         <div className="gun"> 
           <h3 className="baslik">Çarşamba</h3>
-          <Gorev/>
         </div>
         <div className="gun"> 
           <h3 className="baslik">Perşembe</h3>
-          <Gorev/>
-          <Gorev/> 
         </div>
         <div className="gun"> 
           <h3 className="baslik">Cuma</h3>
-          <Gorev/> 
         </div>
       </div>
     
