@@ -1,0 +1,57 @@
+p {
+  text-align: justify;
+}
+
+.todo {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gunler {
+  display: flex;  
+}
+
+.gun {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
+  
+  background-color: silver;
+  margin-left : 10px
+}
+
+.baslik {
+  color: black;
+}
+
+.gorev-card {
+  display: flex;
+  flex-direction: column;
+  margin-top:5px;
+  padding: 10px;
+  border: 1px solid;
+  border-radius:10px;
+  width: 150px;
+  background-color: white;
+}
+
+.gor-bas {
+  margin-bottom: 0;
+}
+
+.gor-durumlar{
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px dashed;
+  padding-top: 10px;
+  margin-left: 5px;
+  margin-bottom:10px;
+}
+
+.durumlar{
+  
+}
