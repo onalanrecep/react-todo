@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './components/Navbar'
-import Gorev from './components/Gorev'
+import Navbar from './components/Navbar';
+import Gorev from './components/Gorev';
 import './App.css';
 
 function App() {
