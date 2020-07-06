@@ -36,6 +36,8 @@ class App extends Component {
     ]
   }
 
+  
+
 render() {
 
   return (
@@ -45,7 +47,7 @@ render() {
         <Navbar/>
       <div className="sorumlular">
         <div className="sorumlu"> 
-          <h3 className="baslik">Recep</h3>
+          <h3 className="baslik"> {'Recep'} </h3>
           <Gorevler gorevler = {this.state.gorevler}         />
         </div>
       </div>

@@ -5,11 +5,11 @@ class Navbar extends Component {
         return (
             <div className="navbar">
                 <div className="nav">
-                    <h1>React To-Do</h1>
+                    <h1>{'React To-Do'}</h1>
                 </div>
             <div className="nav">
-                <div><button>Sorumlu Ekle</button> </div>
-                <div><button>Görev Ekle</button></div>
+                <div><button className="nav-btn">{'Sorumlu Ekle'}</button> </div>
+                <div><button className="nav-btn">{'Görev Ekle'}</button></div>
             </div>   
             </div>
         )
