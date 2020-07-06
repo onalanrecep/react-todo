@@ -43,22 +43,10 @@ render() {
       
       <div className="todo"> 
         <Navbar/>
-      <div className="gunler">
-        <div className="gun"> 
-          <h3 className="baslik">Pazartesi</h3>
+      <div className="sorumlular">
+        <div className="sorumlu"> 
+          <h3 className="baslik">Recep</h3>
           <Gorevler gorevler = {this.state.gorevler}         />
-        </div>
-        <div className="gun"> 
-          <h3 className="baslik">Salı</h3>
-        </div>
-        <div className="gun"> 
-          <h3 className="baslik">Çarşamba</h3>
-        </div>
-        <div className="gun"> 
-          <h3 className="baslik">Perşembe</h3>
-        </div>
-        <div className="gun"> 
-          <h3 className="baslik">Cuma</h3>
         </div>
       </div>
     

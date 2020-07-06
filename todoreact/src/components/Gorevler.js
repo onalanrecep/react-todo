@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Gorev from './Gorev';
 
 class Gorevler extends Component {
+    
     render() {
         const {gorevler} = this.props;
     
