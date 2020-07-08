@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {GorevProvider} from './context';
 
 ReactDOM.render(
   <React.StrictMode>
+  <GorevProvider>
     <App />
+  </GorevProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

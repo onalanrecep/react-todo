@@ -1,28 +1,39 @@
 import React, { Component } from 'react'
 import Gorev from './Gorev';
+import UserConsumer from '../context';
 
 class Gorevler extends Component {
     
     render() {
-        const {gorevler} = this.props;
-    
+        
         return (
-            <div>
+            <UserConsumer>
                 {
-                    gorevler.map( gorev => {
-                        return(
-                            <Gorev
-                                key = {gorev.id}
-                                baslik = {gorev.baslik}
-                                tanim = {gorev.tanim}
-                                sorumlu = {gorev.sorumlu}
-                                durum = {gorev.durum}
-                                oncelik = {gorev.oncelik}
-                            />
+                    value => {
+                        const {gorevler} = value;
+                        return (
+                            <div>
+                                {
+                                    gorevler.map( gorev => {
+                
+                                        return(
+                                            <Gorev
+                                                key = {gorev.id}
+                                                baslik = {gorev.baslik}
+                                                tanim = {gorev.tanim}
+                                                sorumlu = {gorev.sorumlu}
+                                                durum = {gorev.durum}
+                                                oncelik = {gorev.oncelik}
+                                            />
+                                        )
+                                    })
+                                }            
+                            </div>
                         )
-                    })
-                }            
-            </div>
+
+                    }
+                }
+            </UserConsumer>
         )
     }
 }
