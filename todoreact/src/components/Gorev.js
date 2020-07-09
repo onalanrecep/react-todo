@@ -23,7 +23,10 @@ class Gorev extends Component {
         const {isVisible} = this.state;
         return (  
         <div className="gorev-card">
+        <div className="gorev-baslik">
             <h4 className="gor-bas" onClick = {this.onClickEvent.bind(this)}>{baslik}</h4>
+            <i class="fas fa-trash-alt icon"></i>
+        </div>
             {
                 isVisible ? <div>
                 <p>{tanim}</p>
