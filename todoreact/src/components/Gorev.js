@@ -18,14 +18,14 @@ class Gorev extends Component {
         })
     }
 
-    onDeleteGorev = (dispatch,e) => {
+    onDeleteGorev = (dispatch, e) => {
         const {id} = this.props;
-        dispatch({type: "DELETE_GOREV", payload:id});
+        dispatch({type : "DELETE_GOREV", payload :id});
     }
 
     render() {
         //Destructing
-        const {baslik,tanim,sorumlu,durum,oncelik} = this.props;
+        const {id,baslik,tanim,sorumlu,durum,oncelik} = this.props;
         const {isVisible} = this.state;
         return(
             <GorevConsumer>
@@ -36,7 +36,8 @@ class Gorev extends Component {
                             <div className="gorev-card">
                             <div className="gorev-baslik">
                                 <h4 className="gor-bas" onClick = {this.onClickEvent.bind(this)}>{baslik}</h4>
-                                <i onClick = {this.onDeleteGorev.bind(this,dispatch)} class="fas fa-trash-alt icon"></i>
+                                <p>{id}</p>
+                                <i onClick = {this.onDeleteGorev.bind(this, dispatch)} className="fas fa-trash-alt icon"></i>
                             </div>
                                 {
                                     isVisible ? <div>
@@ -60,6 +61,7 @@ class Gorev extends Component {
     }
 }
 Gorev.defaultProps = {
+    
     baslik : "Belirtilmedi",
     tanim : "Belirtilmedi",
     sorumlu : "Belirtilmedi",
@@ -68,6 +70,7 @@ Gorev.defaultProps = {
 }
 
 Gorev.propTypes = {
+
     id : PropTypes.number.isRequired,
     baslik : PropTypes.string.isRequired,
     tanim : PropTypes.string.isRequired,

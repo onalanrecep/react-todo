@@ -77,3 +77,6 @@ p {
   justify-content: space-around;
   align-items: baseline;
 }
+.icon {
+  cursor: pointer;
+}
