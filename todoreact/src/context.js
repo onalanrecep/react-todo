@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 
 const GorevContext = React.createContext();
 
+//Provider, Consumer
+const reducer = (state, action) => {
+  switch(action.type) {
+    case "DELETE_GOREV":
+      return {
+        ...state,
+        gorevler: state.gorevler.filter(gorev => action.payload !== gorev.id)
+      }
+      default:
+        return state
+  }
+}
+
 export class GorevProvider extends Component {
     state = {
         gorevler : [
@@ -17,7 +30,7 @@ export class GorevProvider extends Component {
             id: 2,
             baslik: "Görev 2",
             tanim: "Deneme içerik başka",
-            sorumlu: "Hicran Üçgül",
+            sorumlu: "Recep Önalan",
             durum: "İşlemde",
             oncelik: "Orta"
           },
@@ -38,7 +51,10 @@ export class GorevProvider extends Component {
             oncelik: "Acil"
           }
     
-        ]
+        ],
+        dispatch : action => {
+          this.setState(state => reducer(state, action)) 
+        }
       }
 
 
