@@ -33,7 +33,7 @@ class Gorev extends Component {
                     value => {
                         const {dispatch} = value;
                         return (  
-                            <div className="gorev-card">
+                            <div className="gorev-card" style = { isVisible ? {backgroundColor : "#62848d", color : "white"} : null }>
                             <div className="gorev-baslik">
                                 <h4 className="gor-bas" onClick = {this.onClickEvent.bind(this)}>{baslik}</h4>
                                 
@@ -71,7 +71,7 @@ Gorev.defaultProps = {
 
 Gorev.propTypes = {
 
-    id : PropTypes.number.isRequired,
+    id : PropTypes.string.isRequired,
     baslik : PropTypes.string.isRequired,
     tanim : PropTypes.string.isRequired,
     sorumlu : PropTypes.string.isRequired,

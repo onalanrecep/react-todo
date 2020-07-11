@@ -10,6 +10,11 @@ const reducer = (state, action) => {
         ...state,
         gorevler : state.gorevler.filter(gorev => action.payload !== gorev.id)
       }
+   case "ADD_GOREV" :
+     return {
+       ...state,
+       gorevler : [...state.gorevler,action.payload]
+     }
       default:
         return state
   }
@@ -19,7 +24,7 @@ export class GorevProvider extends Component {
     state = {
         gorevler : [
           { 
-            id: 1,
+            id: "unique-1",
             baslik: "Görev 1",
             tanim: "Deneme içerik",
             sorumlu: "Recep Önalan",
@@ -27,7 +32,7 @@ export class GorevProvider extends Component {
             oncelik: "Acil"
           },
           { 
-            id: 2,
+            id: "unique-2",
             baslik: "Görev 2",
             tanim: "Deneme içerik başka",
             sorumlu: "Recep Önalan",
@@ -35,7 +40,7 @@ export class GorevProvider extends Component {
             oncelik: "Orta"
           },
           { 
-            id: 3,
+            id: "unique-3",
             baslik: "Gorev 3",
             tanim: "Artık denemeleri bırak",
             sorumlu: "Recep Önalan",
@@ -43,7 +48,7 @@ export class GorevProvider extends Component {
             oncelik: "Acil"
           },
           { 
-            id: 4,
+            id: "unique-4",
             baslik: "Gorev 4",
             tanim: "Ne biz deneme oldu",
             sorumlu: "Recep Önalan",
@@ -51,7 +56,7 @@ export class GorevProvider extends Component {
             oncelik: "Acil"
           },
           {
-            id: 5,
+            id: "unique-5",
             baslik: "Gorev 5",
             tanim: "Ne biz deneme oldu",
             sorumlu: "Recep Önalan",
