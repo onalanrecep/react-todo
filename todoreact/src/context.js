@@ -43,7 +43,7 @@ export class GorevProvider extends Component {
             oncelik: "Acil"
           },
           { 
-            id: 3,
+            id: 4,
             baslik: "Gorev 4",
             tanim: "Ne biz deneme oldu",
             sorumlu: "Recep Önalan",

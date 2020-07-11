@@ -19,6 +19,7 @@ class Gorevler extends Component {
                                         return(
                                             <Gorev
                                                 key = {gorev.id}
+                                                id = {gorev.id}
                                                 baslik = {gorev.baslik}
                                                 tanim = {gorev.tanim}
                                                 sorumlu = {gorev.sorumlu}
