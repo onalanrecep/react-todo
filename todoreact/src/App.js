@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 //import Gorev from './components/Gorev';
+import AddGorev from './components/AddGorev';
 import Gorevler from './components/Gorevler';
 import './App.css';
 
@@ -20,6 +21,7 @@ render() {
       <div className="sorumlular">
         <div className="sorumlu"> 
           <h3 className="baslik"> {'Recep'} </h3>
+          <AddGorev />
           <Gorevler />
         </div>
       </div>
