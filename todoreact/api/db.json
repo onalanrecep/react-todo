@@ -1,0 +1,28 @@
+{
+    "gorevler" : [
+        { 
+            "id": "unique-1",
+            "baslik": "Görev 1",
+            "tanim": "Deneme içerik",
+            "sorumlu": "Recep Önalan",
+            "durum": "Beklemede",
+            "oncelik": "Acil"
+          },
+          { 
+            "id": "unique-2",
+            "baslik": "Görev 2",
+            "tanim": "Deneme içerik başka",
+            "sorumlu": "Recep Önalan",
+            "durum": "İşlemde",
+            "oncelik": "Orta"
+          },
+          { 
+            "id": "unique-3",
+            "baslik": "Gorev 3",
+            "tanim": "Artık denemeleri bırak",
+            "sorumlu": "Recep Önalan",
+            "durum": "İşlemde",
+            "oncelik": "Acil"
+          }
+    ]
+}

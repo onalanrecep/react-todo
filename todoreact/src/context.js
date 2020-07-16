@@ -22,49 +22,7 @@ const reducer = (state, action) => {
 
 export class GorevProvider extends Component {
     state = {
-        gorevler : [
-          { 
-            id: "unique-1",
-            baslik: "Görev 1",
-            tanim: "Deneme içerik",
-            sorumlu: "Recep Önalan",
-            durum: "Beklemede",
-            oncelik: "Acil"
-          },
-          { 
-            id: "unique-2",
-            baslik: "Görev 2",
-            tanim: "Deneme içerik başka",
-            sorumlu: "Recep Önalan",
-            durum: "İşlemde",
-            oncelik: "Orta"
-          },
-          { 
-            id: "unique-3",
-            baslik: "Gorev 3",
-            tanim: "Artık denemeleri bırak",
-            sorumlu: "Recep Önalan",
-            durum: "İşlemde",
-            oncelik: "Acil"
-          },
-          { 
-            id: "unique-4",
-            baslik: "Gorev 4",
-            tanim: "Ne biz deneme oldu",
-            sorumlu: "Recep Önalan",
-            durum: "İşlemde",
-            oncelik: "Acil"
-          },
-          {
-            id: "unique-5",
-            baslik: "Gorev 5",
-            tanim: "Ne biz deneme oldu",
-            sorumlu: "Recep Önalan",
-            durum: "İşlemde",
-            oncelik: "Acil"
-          }
-    
-        ],
+        gorevler : [],
         dispatch : action => {
           this.setState(state => reducer(state,action)) 
         }
