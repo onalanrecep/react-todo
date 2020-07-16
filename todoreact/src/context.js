@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from "axios";
 
 const GorevContext = React.createContext();
 
@@ -27,6 +28,15 @@ export class GorevProvider extends Component {
           this.setState(state => reducer(state,action)) 
         }
       }
+
+      componentDidMount = async () => {
+        //uygulama yüklediğinizde server-json'u başlatırken 3004 portunda başlatın
+        const response = await axios.get("http://localhost:3004/gorevler")
+        this.setState({
+          gorevler : response.data
+        })
+      }
+      
 
 
     render() {
