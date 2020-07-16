@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import posed from 'react-pose';
 import GorevConsumer from '../context';
-var uniqid = require('uniqid');
+import axios from 'axios';
 
 const Animasyon = posed.div({
     visible : {
@@ -42,19 +42,19 @@ class AddGorev extends Component {
         })
     }
 
-    addGorev = (dispatch,e) => {
+    addGorev = async (dispatch,e) => {
         e.preventDefault();
         const {baslik, tanim, sorumlu, durum, oncelik} =  this.state;
 
         const newGorev = {
-            id : uniqid(),
             baslik,
             tanim,
             sorumlu,
             durum,
             oncelik
         }
-        dispatch({type : "ADD_GOREV", payload : newGorev})
+        const response = await axios.post("http://localhost:3004/gorevler", newGorev);
+        dispatch({type : "ADD_GOREV", payload:response.data})
     }
 
     render() {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import GorevConsumer from '../context';
+import axios from 'axios';
 
 class Gorev extends Component {
 
@@ -18,8 +19,11 @@ class Gorev extends Component {
         })
     }
 
-    onDeleteGorev = (dispatch, e) => {
+    onDeleteGorev = async (dispatch, e) => {
         const {id} = this.props;
+        //Delete req
+        await axios.delete(`http://localhost:3004/gorevler/${id}`)
+        //Consumer Dispatch
         dispatch({type : "DELETE_GOREV", payload :id});
     }
 
