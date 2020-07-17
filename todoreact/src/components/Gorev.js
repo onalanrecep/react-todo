@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import GorevConsumer from '../context';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class Gorev extends Component {
 
@@ -29,7 +30,7 @@ class Gorev extends Component {
 
     render() {
         //Destructing
-        const {baslik, tanim, sorumlu, durum, oncelik} = this.props;
+        const {id, baslik, tanim, sorumlu, durum, oncelik} = this.props;
         const {isVisible} = this.state;
         return(
             <GorevConsumer>
@@ -47,10 +48,11 @@ class Gorev extends Component {
                                     isVisible ? <div>
                                     <p>{tanim}</p>
                                     <div className="gor-durumlar">
-                                    <div className="durumlar">{sorumlu}</div>
-                                    <div className="durumlar">{durum}</div>
-                                    <div className="durumlar">{oncelik}</div>
+                                        <div className="durumlar">{sorumlu}</div>
+                                        <div className="durumlar">{durum}</div>
+                                        <div className="durumlar">{oncelik}</div>
                                     </div>
+                                    <Link to = {`edit/${id}`} className = "btn">Görevi Güncelle</Link>
                                 </div> : null
                                 }
                     

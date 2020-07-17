@@ -54,7 +54,9 @@ class AddGorev extends Component {
             oncelik
         }
         const response = await axios.post("http://localhost:3004/gorevler", newGorev);
-        dispatch({type : "ADD_GOREV", payload:response.data})
+        dispatch({type : "ADD_GOREV", payload:response.data});
+        //Redirect to home
+        this.props.history.push("/");
     }
 
     render() {

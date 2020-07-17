@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 //import Gorev from './components/Gorev';
-import AddGorev from './components/AddGorev';
+import AddGorev from './forms/AddGorev';
+import UpdateGorev from './forms/UpdateGorev';
 import Gorevler from './components/Gorevler';
 import SayfaBulunamadı from './components/SayfaBulunamadı';
 import './App.css';
@@ -25,6 +26,7 @@ render() {
               <Switch>
                 <Route exact path = "/" component = {Gorevler}/>
                 <Route exact path = "/add" component = {AddGorev}/>
+                <Route exact path = "/edit/:id" component = {UpdateGorev}/>
                 <Route component = {SayfaBulunamadı} />
               </Switch>
             </div>

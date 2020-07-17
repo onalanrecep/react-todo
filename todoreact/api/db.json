@@ -23,6 +23,14 @@
       "durum": "İşleme alındı",
       "oncelik": "Acil",
       "id": "iq8Rf5K"
+    },
+    {
+      "baslik": "Son kontroller tamamlandı",
+      "tanim": "Route görev sonlarına redirect ile anasayfaya yönlendir. Tamamsa güncellemiştir",
+      "sorumlu": "Recep Önalan",
+      "durum": "Tamamlandı",
+      "oncelik": "Acil",
+      "id": "m_uSX7M"
     }
   ]
 }

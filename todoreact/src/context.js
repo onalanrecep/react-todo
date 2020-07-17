@@ -16,6 +16,11 @@ const reducer = (state, action) => {
        ...state,
        gorevler : [...state.gorevler,action.payload]
      }
+     case "UPDATE_GOREV" :
+       return {
+         ...state,
+         gorevler : state.gorevler.map(gorev => gorev.id === action.payload.id ? action.payload : gorev)
+       }
       default:
         return state
   }
